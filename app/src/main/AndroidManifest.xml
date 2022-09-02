@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Odev2FMSS">
         <activity
-            android:name=".MainActivity"
+            android:name=".PasswordRenewScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccountScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GetStartedScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
