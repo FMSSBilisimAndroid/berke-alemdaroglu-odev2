@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedScreenActivity">
+
+    <ImageView
+        android:id="@+id/getStartedBackgroundTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="-106dp"
+        android:layout_marginEnd="-63dp"
+        android:layout_marginBottom="572dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_get_started_screen_background" />
+
+    <ImageView
+        android:id="@+id/getStartedBackgroundBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="-246dp"
+        android:layout_marginBottom="319dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_get_started_screen_background" />
+
+    <ImageView
+        android:id="@+id/getStartedProfileBottom"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="478dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492"
+        app:srcCompat="@drawable/get_started_profile_image_bottom" />
+
+    <ImageView
+        android:id="@+id/getStartedProfileTop"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="249dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedProfileBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/get_started_screen_profile_top" />
+
+    <TextView
+        android:id="@+id/getStartedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="156dp"
+        android:fontFamily="@font/inter"
+        android:lineHeight="75sp"
+        android:text="Let’s Get Started"
+        android:textColor="@color/black"
+        android:textFontWeight="800"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/growTogetherText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="245dp"
+        android:fontFamily="@font/inter"
+        android:lineHeight="24sp"
+        android:text="Grow Together"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/getStartedText" />
+
+    <Button
+        android:id="@+id/joinNowButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="48dp"
+
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/inder"
+        android:lineHeight="45sp"
+        android:text="JOIN NOW"
+        android:textFontWeight="400"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

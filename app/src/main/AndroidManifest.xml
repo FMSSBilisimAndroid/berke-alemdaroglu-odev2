@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Odev2FMSS">
         <activity
-            android:name=".PasswordRenewScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CreateAccountScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginScreenActivity"
-            android:exported="false" />
-        <activity
             android:name=".GetStartedScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -27,6 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PasswordRenewScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccountScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreenActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
