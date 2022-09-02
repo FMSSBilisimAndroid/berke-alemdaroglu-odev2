@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Odev2FMSS</string>
+    <string name="let_s_get_started">Let’s Get Started</string>
+    <string name="grow_together">Grow Together</string>
+    <string name="join_now">JOIN NOW</string>
+    <string name="top_circle_background_images">Top Circle Background Images</string>
+    <string name="bottom_circle_background_images">Top Circle Background Images</string>
+    <string name="bottom_profile_background_images">Bottom Profile Background Images</string>
+    <string name="top_profile_background_images">Top Profile Background Images</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_your_username_password"><![CDATA[Enter Your Username & Password]]></string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgotten_passwoard">Forgotten Passwoard?</string>
+    <string name="or_create_a_new_account">Or Create a New Account</string>
+    <string name="back_screen_button">Back Screen Button</string>
+    <string name="bottom_background_image">Bottom Background Image</string>
+    <string name="top_background_image">Top Background Image</string>
+    <string name="create_naccount">Create\nAccount :)</string>
+    <string name="create_account_background">Create Account Background</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="create_username">Create Username</string>
+    <string name="create_passward">Create Passward</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

@@ -6,13 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccountScreenActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/createScreenBackgroundTop"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:layout_marginStart="-90dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="253dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_create_account_background"
+        android:contentDescription="@string/create_account_background"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="-125dp"
+        android:layout_marginBottom="130dp"
+        android:contentDescription="@string/create_account_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_create_account_background" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/HeaderTitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="162dp"
+        android:text="@string/create_naccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backScreenCreateAccountButton"
+        style="@style/backScreenButton"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/back_screen_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enterEmailIdText"
+        style="@style/EditTextUpperTextStyle"
+        android:layout_marginTop="260dp"
+        android:text="@string/enter_email_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createUsernameText"
+        style="@style/EditTextUpperTextStyle"
+        android:layout_marginTop="93dp"
+        android:text="@string/create_username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterEmailIdText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/createPasswordText"
+        style="@style/EditTextUpperTextStyle"
+        android:layout_marginTop="107dp"
+        android:text="@string/create_passward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createUsernameText" />
+
+    <EditText
+        android:id="@+id/createAccountEmailEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterEmailIdText"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <EditText
+        android:id="@+id/createAccountUsernameEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createUsernameText"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <EditText
+        android:id="@+id/createAccountPasswordEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPasswordText"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/createAccountButton"
+        style="@style/BaseButtonStyle"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
