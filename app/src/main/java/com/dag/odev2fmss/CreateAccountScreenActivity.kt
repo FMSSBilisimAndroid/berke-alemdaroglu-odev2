@@ -21,6 +21,7 @@ class CreateAccountScreenActivity : AppCompatActivity() {
         binding = ActivityCreateAccountScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
         binding.createAccountButton.setOnClickListener {
             createUserName = binding.createAccountUsernameEditText.text.toString()
@@ -48,7 +49,7 @@ class CreateAccountScreenActivity : AppCompatActivity() {
                     Toast.makeText(this, "Kayıt Başarılı! Hoşgeldiniz : $createEmail", Toast.LENGTH_SHORT).show()
 
                     startActivity(Intent(this@CreateAccountScreenActivity,
-                        HomeActivity::class.java))
+                        LoginScreenActivity::class.java))
                     finish()
                 }
             }

@@ -31,6 +31,8 @@ class GetStartedScreenActivity : AppCompatActivity() {
             }
     }
 
+
+
     private fun loginButtonIntent(){
         binding.joinNowButton.setOnClickListener {
             startActivity(Intent(this@GetStartedScreenActivity, LoginScreenActivity::class.java))

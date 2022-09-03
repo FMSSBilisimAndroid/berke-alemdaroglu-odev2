@@ -8,9 +8,8 @@ import android.os.Bundle
 import com.dag.odev2fmss.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityHomeBinding
+    private lateinit var binding: ActivityHomeBinding
     private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var sharedNameValue : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,16 +17,20 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+
+        binding.usernameHomeScreenText.text =
+            sharedPreferences.getString("USERNAME", "DEFAULT").toString()
+        binding.paswordHomeScreenText.text =
+            sharedPreferences.getString("PASSWORD", "DEFAULT PASS").toString()
+
         logOutButtonPreferencesDelete()
-        sharedNameValue = sharedPreferences.getString("USERNAME", "DEFAULT").toString()
-        binding.usernameHomeScreenText.text = sharedNameValue
 
     }
 
-    private fun logOutButtonPreferencesDelete(){
+    private fun logOutButtonPreferencesDelete() {
         binding.logOutButton.setOnClickListener {
             sharedPreferences.edit().clear().apply()
-          startActivity(Intent(this@HomeActivity, LoginScreenActivity::class.java))
+            startActivity(Intent(this@HomeActivity, LoginScreenActivity::class.java))
         }
     }
 }
