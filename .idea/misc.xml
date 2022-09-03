@@ -6,12 +6,17 @@
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/drawable/circle_image.xml" value="0.5435" />
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/drawable/get_started_background_ellipse.xml" value="0.5435" />
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/drawable/ic_login_screen_background.xml" value="0.5435" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/drawable/ic_password_renew_screen_background.xml" value="0.314" />
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/drawable/image.xml" value="0.5" />
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_create_account.xml" value="0.33" />
-        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_get_started_screen.xml" value="0.3473684210526316" />
-        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_login_screen.xml" value="0.3473684210526316" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_create_account_screen.xml" value="0.19671052631578947" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_get_started_screen.xml" value="0.33" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_home.xml" value="0.19638157894736843" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_home_screen.xml" value="0.3473684210526316" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_login_screen.xml" value="0.25" />
         <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_password_renew_screen.xml" value="0.3473684210526316" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_password_renew_screen.xml" value="0.25" />
+        <entry key="..\:/Users/ersin/FMSS/berke-alemdaroglu-odev2/app/src/main/res/layout/activity_password_reset.xml" value="0.3473684210526316" />
       </map>
     </option>
   </component>

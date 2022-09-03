@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseButtonStyle" parent="Widget.Material3.Button">
+    <style name="BaseButtonStyle" parent="Widget.Material3.Button.ElevatedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">74dp</item>
@@ -16,7 +16,7 @@
         <item name="android:textSize">36sp</item>
     </style>
 
-    <style name="backScreenButton">
+    <style name="backScreenButton" parent="ShapeAppearanceOverlay.Material3.Button">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_marginStart">29dp</item>

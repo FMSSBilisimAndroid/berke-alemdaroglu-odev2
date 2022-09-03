@@ -10,7 +10,7 @@
     <string name="login">LOGIN</string>
     <string name="enter_your_username_password"><![CDATA[Enter Your Username & Password]]></string>
     <string name="welcome_back">Welcome Back!</string>
-    <string name="username">Username</string>
+    <string name="emailText">Email</string>
     <string name="password">Password</string>
     <string name="forgotten_passwoard">Forgotten Passwoard?</string>
     <string name="or_create_a_new_account">Or Create a New Account</string>
@@ -23,4 +23,13 @@
     <string name="create_username">Create Username</string>
     <string name="create_passward">Create Passward</string>
     <string name="sign_up">Sign Up</string>
+    <string name="background_image">Background Image</string>
+    <string name="your_password">Password Reset!</string>
+    <string name="renew_password">RENEW PASSWORD</string>
+    <string name="log_in_again">LOG IN AGAIN</string>
+    <string name="login_successful">Login successful</string>
+    <string name="usernameHome">Username :</string>
+    <string name="fmss_bootcamp_homework">FMSS Bootcamp Homework</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="username">Username</string>
 </resources>
