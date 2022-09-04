@@ -45,14 +45,14 @@ class CreateAccountScreenActivity : AppCompatActivity() {
             editor.apply()
 
             when {
+                createEmail.isEmpty() -> Toast.makeText(this,
+                    "Lütfen Email Adresinizi Girin!",
+                    Toast.LENGTH_SHORT).show()
                 createUserName.isEmpty() -> Toast.makeText(this,
                     "Lütfen Kullanıcı Adınızı Girin!",
                     Toast.LENGTH_SHORT).show()
                 createPassword.isEmpty() -> Toast.makeText(this,
                     "Lütfen Şifrenizi Girin!",
-                    Toast.LENGTH_SHORT).show()
-                createEmail.isEmpty() -> Toast.makeText(this,
-                    "Lütfen Email Adresinizi Girin!",
                     Toast.LENGTH_SHORT).show()
                 else -> {
                     Toast.makeText(this,

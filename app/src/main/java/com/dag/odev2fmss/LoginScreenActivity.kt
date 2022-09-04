@@ -61,11 +61,13 @@ class LoginScreenActivity : AppCompatActivity() {
                     putString("PASSWORD", userDataClass.password)
                     putBoolean("CHECK", true)
                 }
+                Toast.makeText(this, "Giriş Başarılı! $loginUserName", Toast.LENGTH_SHORT).show()
                 Util.backStack(this, HomeActivity())
             } else if (loginUserName.isEmpty() && loginPassword.isEmpty()) {
                 Toast.makeText(this, "Gerekli Alanları Doldurun!", Toast.LENGTH_SHORT).show()
             } else if (sharedUsernameValue == loginPassword && sharedPasswordValue == loginPassword) {
-                Toast.makeText(this, "Kayıt Sonrası Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
+                sharedPreferences.edit().putBoolean("CHECK", true).apply()
                 Util.backStack(this, HomeActivity())
             } else {
                 Toast.makeText(this,

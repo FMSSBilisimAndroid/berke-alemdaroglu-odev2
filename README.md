@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Ersin Berke Alemdaroğlu</h1>
 <h3 align="center">Developer from Istanbul,Turkey</h3>
 
-- 👨‍💻 All of my projects are available at [https://www.ersinberkealemdaroglu.com.tr](https://www.ersinberkealemdaroglu.com.tr)
+- 👨‍💻 All of my projects are available at 🌐 [https://www.alemdaroglu.org](https://www.alemdaroglu.org"alemdaroglu.org")
 
 - 📫 How to reach me **ersinberkealemdaroglu@gmail.com**
 
@@ -19,3 +19,15 @@
 
 <!--Most Used Languages-->
 <img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=berkealemdaroglu&layout=compact&hide=html,css" alt="My Top Langs" />
+
+# FMSS BOOTCAMP WAKE 2
+## Login Sceen Homework
+
+#### Demo için oluşturulan userDataClass'dan alınan username ve password ile giriş yapma. Veri Shared Preference ile kayıt edilmektedir.
+https://user-images.githubusercontent.com/50260160/188324258-182a8517-e912-4744-9df4-5fd6e5eec91e.mp4
+
+#### Kullanıcı kayıt ekranı ve yapılan kayıt sonrası giriş ekranı. Tüm Veriler sharedPreference üzerinde tutulmaktadır.
+https://user-images.githubusercontent.com/50260160/188324334-55c5a833-97c6-4dfc-aed0-f098a2ffbcb9.mp4
+
+#### Şifre yenileme ekranı.
+https://user-images.githubusercontent.com/50260160/188324373-d7e35045-8206-4eb2-ab8e-1dbbe46b8417.mp4
