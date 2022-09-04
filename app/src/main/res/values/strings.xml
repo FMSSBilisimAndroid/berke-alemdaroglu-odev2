@@ -32,4 +32,5 @@
     <string name="fmss_bootcamp_homework">FMSS Bootcamp Homework</string>
     <string name="log_out">LOG OUT</string>
     <string name="username">Username</string>
+    <string name="passwordnew">Password :</string>
 </resources>

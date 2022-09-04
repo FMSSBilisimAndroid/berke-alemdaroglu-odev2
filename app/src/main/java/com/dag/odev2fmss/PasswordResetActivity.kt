@@ -1,14 +1,13 @@
 package com.dag.odev2fmss
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dag.odev2fmss.databinding.ActivityPasswordResetBinding
 
 class PasswordResetActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPasswordResetBinding
-    private lateinit var emailText : String
+    private lateinit var emailText: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,17 +18,19 @@ class PasswordResetActivity : AppCompatActivity() {
         onBackStackPressButton()
     }
 
-    private fun resetPasswordButtonClicked(){
+    private fun resetPasswordButtonClicked() {
         binding.renewPasswordButton.setOnClickListener {
             emailText = binding.usernameEditText.text.toString()
-            Toast.makeText(this, "$emailText : Mail Adresine Şifre Gönderilmiştir!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,
+                "$emailText : Mail Adresine Şifre Gönderilmiştir!",
+                Toast.LENGTH_SHORT).show()
         }
     }
 
     /**
      * backScreenButton ile bir önceki sayfaya geçişi sağlanıyor.
      */
-    private fun onBackStackPressButton(){
+    private fun onBackStackPressButton() {
         binding.backScreenButton.setOnClickListener {
             Util.backStack(this, LoginScreenActivity())
         }

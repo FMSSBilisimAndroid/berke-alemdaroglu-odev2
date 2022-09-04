@@ -24,8 +24,10 @@ class LoginScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
-        sharedUsernameValue = sharedPreferences.getString("USERNAME", sharedUsernameValue).toString()
-        sharedPasswordValue = sharedPreferences.getString("PASSWORD", sharedPasswordValue).toString()
+        sharedUsernameValue =
+            sharedPreferences.getString("USERNAME", sharedUsernameValue).toString()
+        sharedPasswordValue =
+            sharedPreferences.getString("PASSWORD", sharedPasswordValue).toString()
 
         orCreateAccountButtonIntent()
         forgottenPasswordButtonIntent()
@@ -55,20 +57,20 @@ class LoginScreenActivity : AppCompatActivity() {
 
             if (userDataClass.username == loginUserName && userDataClass.password == loginPassword) {
                 sharedPreferences.edit {
-                    putString("USERNAME",  "Username : " + userDataClass.username)
-                    putString("PASSWORD", "Password : " +  userDataClass.password)
+                    putString("USERNAME", userDataClass.username)
+                    putString("PASSWORD", userDataClass.password)
+                    putBoolean("CHECK", true)
                 }
-                Toast.makeText(this, "Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@LoginScreenActivity, HomeActivity::class.java))
-                supportFinishAfterTransition()
+                Util.backStack(this, HomeActivity())
             } else if (loginUserName.isEmpty() && loginPassword.isEmpty()) {
                 Toast.makeText(this, "Gerekli Alanları Doldurun!", Toast.LENGTH_SHORT).show()
             } else if (sharedUsernameValue == loginPassword && sharedPasswordValue == loginPassword) {
                 Toast.makeText(this, "Kayıt Sonrası Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@LoginScreenActivity, HomeActivity::class.java))
-                supportFragmentManager.popBackStack()
+                Util.backStack(this, HomeActivity())
             } else {
-                Toast.makeText(this, "Kullanıcı Bulunamadı! Giriş Yapmak İçin Kayıt Olabilirsiniz!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,
+                    "Kullanıcı Bulunamadı! Giriş Yapmak İçin Kayıt Olabilirsiniz!",
+                    Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -94,7 +96,7 @@ class LoginScreenActivity : AppCompatActivity() {
     /**
      * backScreenButton ile bir önceki sayfaya geçişi sağlanıyor.
      */
-    private fun onBackStackPressButton(){
+    private fun onBackStackPressButton() {
         binding.backScreenButton.setOnClickListener {
             Util.backStack(this, GetStartedScreenActivity())
         }

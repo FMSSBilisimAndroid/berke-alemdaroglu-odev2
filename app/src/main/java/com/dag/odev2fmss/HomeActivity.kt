@@ -1,10 +1,9 @@
 package com.dag.odev2fmss
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.dag.odev2fmss.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -18,13 +17,12 @@ class HomeActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
 
-        binding.usernameHomeScreenText.text =
-            sharedPreferences.getString("USERNAME", "Username : " +  "DEFAULT").toString()
-        binding.paswordHomeScreenText.text =
-            sharedPreferences.getString("PASSWORD", "Password : " + "DEFAULT PASS").toString()
+        binding.apply {
+            usernameHomeScreenText.text = sharedPreferences.getString("USERNAME", "Default")
+            paswordHomeScreenText.text = sharedPreferences.getString("PASSWORD", "DEFAULT PASS")
+        }
 
         logOutButtonPreferencesDelete()
-
     }
 
     /**
@@ -32,8 +30,9 @@ class HomeActivity : AppCompatActivity() {
      */
     private fun logOutButtonPreferencesDelete() {
         binding.logOutButton.setOnClickListener {
-            sharedPreferences.edit().clear().apply()
-            startActivity(Intent(this@HomeActivity, LoginScreenActivity::class.java))
+            sharedPreferences.edit().putBoolean("CHECK", false).apply()
+            Util.backStack(this, LoginScreenActivity())
         }
     }
+
 }

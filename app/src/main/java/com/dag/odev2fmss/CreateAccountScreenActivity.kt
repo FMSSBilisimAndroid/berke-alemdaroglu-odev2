@@ -1,7 +1,6 @@
 package com.dag.odev2fmss
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
@@ -59,10 +58,7 @@ class CreateAccountScreenActivity : AppCompatActivity() {
                     Toast.makeText(this,
                         "Kayıt Başarılı! Hoşgeldiniz : $createEmail",
                         Toast.LENGTH_SHORT).show()
-
-                    startActivity(Intent(this@CreateAccountScreenActivity,
-                        LoginScreenActivity::class.java))
-                    supportFinishAfterTransition()
+                    Util.backStack(this, HomeActivity())
                 }
             }
 
