@@ -22,6 +22,7 @@ class LoginScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
         sharedUsernameValue = sharedPreferences.getString("USERNAME", sharedUsernameValue).toString()
         sharedPasswordValue = sharedPreferences.getString("PASSWORD", sharedPasswordValue).toString()
@@ -29,8 +30,22 @@ class LoginScreenActivity : AppCompatActivity() {
         orCreateAccountButtonIntent()
         forgottenPasswordButtonIntent()
         loginButtonIntent()
+        onBackStackPressButton()
     }
 
+    /**
+     *
+     * loginButtonIntent fonksiyonunda kullanıcı bilgilerinin karşılaştırılması ve karşılaştırma sonraso gerekli yere gönderilme işlemi yapılmaktadır.
+     *  UserDataClass'da oluşturduğumuz değerleri initialization ederek ilk değerlerini veriyoruz.
+     *  loginUserName değişkenine loginButton a basıldığında usernameEditText ve passwprdEditText lere girilen değerleri atıyoruz.
+     *  if sorgumuzda statik olarak oluşturduğumuz değerler ile edittexlere girilen değerlerin aynı olup olmadığı durumları karşılaştırıyoruz.
+     *  Uygulamamızda live data olmadığından uygulamaya giriş yapılabilmesi için default kullanıcı oluşturulmuştur.
+     *  Eğer kullanıcıların username ve password default değerlere uymazsa ondan kayıt yapılması isteniyor.
+     *  Kullanıcı kayıt açtıktan sonra tekrar loginScreen ekranına yönlendirilerek giriş yapması talep ediliyor.
+     *  Shared Preference ile tutulan kayıtları yine else if yardımıyla karşılaştırıp gerekleri Activity e yönlendirmesi sağlanıyor.
+     *  Yine if ile EditTextlerin boş olup olmadığıda kontrol ediliyor.
+     *
+     */
     private fun loginButtonIntent() {
         userDataClass = UserDataClass("demo@gmail.com", "demo", "demoPass")
         binding.loginButton.setOnClickListener {
@@ -40,35 +55,49 @@ class LoginScreenActivity : AppCompatActivity() {
 
             if (userDataClass.username == loginUserName && userDataClass.password == loginPassword) {
                 sharedPreferences.edit {
-                    putString("USERNAME", userDataClass.username)
-                    putString("PASSWORD", userDataClass.password)
+                    putString("USERNAME",  "Username : " + userDataClass.username)
+                    putString("PASSWORD", "Password : " +  userDataClass.password)
                 }
                 Toast.makeText(this, "Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this@LoginScreenActivity, HomeActivity::class.java))
-                finish()
+                supportFinishAfterTransition()
             } else if (loginUserName.isEmpty() && loginPassword.isEmpty()) {
                 Toast.makeText(this, "Gerekli Alanları Doldurun!", Toast.LENGTH_SHORT).show()
             } else if (sharedUsernameValue == loginPassword && sharedPasswordValue == loginPassword) {
                 Toast.makeText(this, "Kayıt Sonrası Giriş Yapıldı!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this@LoginScreenActivity, HomeActivity::class.java))
-                finish()
+                supportFragmentManager.popBackStack()
             } else {
-                Toast.makeText(this, "Kullanıcı Bulunamadı!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Kullanıcı Bulunamadı! Giriş Yapmak İçin Kayıt Olabilirsiniz!", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
+    /**
+     * LoginScreen den CreateAccountActivity sayfasına yönlendirme yapılıyor.
+     */
     private fun orCreateAccountButtonIntent() {
         binding.createNewAccountButton.setOnClickListener {
             startActivity(Intent(this@LoginScreenActivity, CreateAccountScreenActivity::class.java))
         }
     }
 
+    /**
+     * LoginScreen den ForgettenPassword sayfasına yönlendirme yapılıyor.
+     */
     private fun forgottenPasswordButtonIntent() {
         binding.forgottenPassTextButton.setOnClickListener {
             startActivity(Intent(this@LoginScreenActivity, PasswordResetActivity::class.java))
         }
     }
 
+    /**
+     * backScreenButton ile bir önceki sayfaya geçişi sağlanıyor.
+     */
+    private fun onBackStackPressButton(){
+        binding.backScreenButton.setOnClickListener {
+            Util.backStack(this, GetStartedScreenActivity())
+        }
+    }
 
 }

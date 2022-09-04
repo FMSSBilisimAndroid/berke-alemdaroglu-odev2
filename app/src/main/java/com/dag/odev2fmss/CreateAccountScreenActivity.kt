@@ -3,9 +3,9 @@ package com.dag.odev2fmss
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dag.odev2fmss.databinding.ActivityCreateAccountScreenBinding
 
 class CreateAccountScreenActivity : AppCompatActivity() {
@@ -21,8 +21,18 @@ class CreateAccountScreenActivity : AppCompatActivity() {
         binding = ActivityCreateAccountScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        createAccountButton()
+        onBackStackPressButton()
 
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+    }
+
+    /**
+     * createAccountButton a basıldığında editTextlerden gelen değeler bir değişkene aktarılıyor.
+     * aktarılan değerler sharedPereference a kayıt ediliyor.
+     * eğer editTextlerin içleri boş değilse kayıt yapılıyor ve tekrar LoginScreenActivity ekranına yönlendiriliyor.
+     */
+    private fun createAccountButton() {
         binding.createAccountButton.setOnClickListener {
             createUserName = binding.createAccountUsernameEditText.text.toString()
             createPassword = binding.createAccountPasswordEditText.text.toString()
@@ -46,14 +56,26 @@ class CreateAccountScreenActivity : AppCompatActivity() {
                     "Lütfen Email Adresinizi Girin!",
                     Toast.LENGTH_SHORT).show()
                 else -> {
-                    Toast.makeText(this, "Kayıt Başarılı! Hoşgeldiniz : $createEmail", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,
+                        "Kayıt Başarılı! Hoşgeldiniz : $createEmail",
+                        Toast.LENGTH_SHORT).show()
 
                     startActivity(Intent(this@CreateAccountScreenActivity,
                         LoginScreenActivity::class.java))
-                    finish()
+                    supportFinishAfterTransition()
                 }
             }
 
         }
     }
+
+    /**
+     * backScreenButton ile bir önceki sayfaya geçişi sağlanıyor.
+     */
+    private fun onBackStackPressButton() {
+        binding.backScreenCreateAccountButton.setOnClickListener {
+            Util.backStack(this, LoginScreenActivity())
+        }
+    }
+
 }

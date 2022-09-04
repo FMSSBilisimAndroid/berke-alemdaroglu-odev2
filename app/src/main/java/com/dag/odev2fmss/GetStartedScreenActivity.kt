@@ -23,6 +23,9 @@ class GetStartedScreenActivity : AppCompatActivity() {
         loginButtonIntent()
     }
 
+    /**
+     * sharedPreference de tutulan 'CHECK' boolean değeri sayesinde kullanıcı giriş yapmışsa HomeScreenActivity e yönlendirmesi yapılıyor.
+     */
     private fun isLoginControllerSharedPreference(){
         isLogin = sharedPreferences.getBoolean("CHECK",isLogin)
             if (isLogin){
@@ -31,8 +34,9 @@ class GetStartedScreenActivity : AppCompatActivity() {
             }
     }
 
-
-
+    /**
+     * joinNowButton ile kullanıcı LoginScreenActivity e yönlendiriliyor.
+     */
     private fun loginButtonIntent(){
         binding.joinNowButton.setOnClickListener {
             startActivity(Intent(this@GetStartedScreenActivity, LoginScreenActivity::class.java))

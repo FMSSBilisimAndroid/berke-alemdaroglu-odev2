@@ -19,14 +19,17 @@ class HomeActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
 
         binding.usernameHomeScreenText.text =
-            sharedPreferences.getString("USERNAME", "DEFAULT").toString()
+            sharedPreferences.getString("USERNAME", "Username : " +  "DEFAULT").toString()
         binding.paswordHomeScreenText.text =
-            sharedPreferences.getString("PASSWORD", "DEFAULT PASS").toString()
+            sharedPreferences.getString("PASSWORD", "Password : " + "DEFAULT PASS").toString()
 
         logOutButtonPreferencesDelete()
 
     }
 
+    /**
+     * logOutButton ile sharedPreference ile tutulan değerler .clear() ile siliniyor ve kullanıcı tekrar loginScreenActivity ekranına yönlendiriliyor.
+     */
     private fun logOutButtonPreferencesDelete() {
         binding.logOutButton.setOnClickListener {
             sharedPreferences.edit().clear().apply()

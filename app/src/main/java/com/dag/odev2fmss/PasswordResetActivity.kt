@@ -1,5 +1,6 @@
 package com.dag.odev2fmss
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,7 @@ class PasswordResetActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         resetPasswordButtonClicked()
+        onBackStackPressButton()
     }
 
     private fun resetPasswordButtonClicked(){
@@ -23,4 +25,14 @@ class PasswordResetActivity : AppCompatActivity() {
             Toast.makeText(this, "$emailText : Mail Adresine Şifre Gönderilmiştir!", Toast.LENGTH_SHORT).show()
         }
     }
+
+    /**
+     * backScreenButton ile bir önceki sayfaya geçişi sağlanıyor.
+     */
+    private fun onBackStackPressButton(){
+        binding.backScreenButton.setOnClickListener {
+            Util.backStack(this, LoginScreenActivity())
+        }
+    }
+
 }
