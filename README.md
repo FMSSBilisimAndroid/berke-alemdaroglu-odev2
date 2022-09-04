@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Ersin Berke Alemdaroğlu</h1>
 <h3 align="center">Developer from Istanbul,Turkey</h3>
 
-- 👨‍💻 All of my projects are available at 🌐 [https://www.alemdaroglu.org](https://www.alemdaroglu.org "alemdaroglu.org")
+- 👨‍💻 All of my projects are available at 🌐 [https://www.alemdaroglu.org](https://www.alemdaroglu.org)
 
 - 📫 How to reach me **ersinberkealemdaroglu@gmail.com**
 
